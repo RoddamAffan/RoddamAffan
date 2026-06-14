@@ -239,36 +239,7 @@ const affan: Developer = {
 </picture>
 </div>
 
-> 💡 **To activate the snake:** In your `RoddamAffan` profile repo, create `.github/workflows/snake.yml` with the workflow below — it auto-generates the SVG on a schedule.
->
-> <details>
-> <summary>Click to expand <code>snake.yml</code></summary>
->
-> ```yaml
-> name: Generate Snake
-> on:
->   schedule:
->     - cron: "0 0 * * *"
->   workflow_dispatch:
-> jobs:
->   generate:
->     runs-on: ubuntu-latest
->     steps:
->       - uses: Platane/snk/svg-only@v3
->         with:
->           github_user_name: RoddamAffan
->           outputs: |
->             dist/github-contribution-grid-snake.svg
->             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
->       - uses: crazy-max/ghaction-github-pages@v3
->         with:
->           target_branch: output
->           build_dir: dist
->         env:
->           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-> ```
->
-> </details>
+
 
 ---
 
